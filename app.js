@@ -78,7 +78,7 @@ async function handleSubmit(event) {
   if (submitting) return;
 
   if (!configured()) {
-    setMessage("Az űrlap még nincs összekötve a Google Sheets táblázattal. Az üzemeltetőnek az app.js fájlban ki kell töltenie az endpoint értékét.", "is-error");
+    setMessage("A regisztráció hamarosan megnyílik.", "");
     return;
   }
 
@@ -140,3 +140,9 @@ async function handleSubmit(event) {
 document.getElementById("year").textContent = new Date().getFullYear();
 form.addEventListener("submit", handleSubmit);
 loadCount();
+
+if (!configured()) {
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Hamarosan nyílik";
+  setMessage("A regisztráció hamarosan megnyílik.", "");
+}
