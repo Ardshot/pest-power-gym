@@ -1,5 +1,5 @@
 const CONFIG = {
-  endpoint: "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE",
+  endpoint: "https://script.google.com/macros/s/AKfycbxWCKwum7NH1MNSNfgCw0C76gCCsDDBSJauUqN35yBjHk7yruk4yGscgbmw3pIsbRw6fA/exec",
   maxSignups: 100,
   contactEmail: "privatevsemvaram@gmail.com"
 };
