@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>100 ingyenes 1 hónapos bérlet — Pest Power Gym Budapest</title>
+  <meta name="description" content="Regisztrálj a Pest Power Gym nyitó akciójára: az első 100 jelentkező egy teljes hónapot ingyen edzhet Budapesten.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <header class="nav container">
+    <a class="brand" href="#top">PEST<span>POWER</span></a>
+    <div class="nav-meta">
+      <span class="dot"></span>
+      Budapest · Nyitó akció
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">100 hely · csak most</p>
+        <h1>100 ingyenes<br><span class="accent">1 hónapos</span><br>bérlet</h1>
+        <p class="lede">Regisztrálj, és eddz nálunk egy teljes hónapig teljesen ingyen. Nincs belépési díj, nincs elköteleződés — csak az első 100 jelentkezőnek.</p>
+
+        <ul class="perks">
+          <li>Korlátlan belépés 30 napig</li>
+          <li>Minden gép és csoportos óra</li>
+          <li>Ingyenes edzésterv-áttekintés</li>
+        </ul>
+
+        <div class="counter">
+          <div class="counter-num" data-remaining>100</div>
+          <div class="counter-label">
+            hely maradt a 100-ból
+            <em>Az ajánlat a helyek elfogyásáig érvényes.</em>
+          </div>
+        </div>
+        <div class="progress"><span data-progress style="width:0%"></span></div>
+        <p class="hero-note">Angolul: <em>100 free one-month memberships for the first 100 sign-ups in Budapest.</em></p>
+      </div>
+
+      <div class="card" id="signup">
+        <div class="card-badge"><span data-remaining>100</span> hely maradt</div>
+        <h2>Foglald le a helyed</h2>
+        <p class="card-sub">Add meg az adataidat, és e-mailben jelentkezünk a részletekkel.</p>
+
+        <form id="signup-form" novalidate>
+          <label class="field">
+            <span>Teljes név</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Kovács Anna" maxlength="80" required>
+          </label>
+
+          <label class="field">
+            <span>E-mail cím</span>
+            <input type="email" name="email" autocomplete="email" placeholder="anna@example.com" maxlength="120" required>
+          </label>
+
+          <label class="field">
+            <span>Telefonszám <small>(opcionális)</small></span>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="+36 30 123 4567" maxlength="30">
+          </label>
+
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>Elfogadom az <a href="#adatkezeles">adatkezelési tájékoztatót</a> és a részvételi feltételeket.</span>
+          </label>
+
+          <label class="check">
+            <input type="checkbox" name="newsletter">
+            <span>Kérek értesítést a nyitásról és a későbbi ajánlatokról.</span>
+          </label>
+
+          <div class="hp" aria-hidden="true">
+            <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <button type="submit" class="btn">Ingyenes hónap igénylése</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          <p class="fine">Nincs spam. Az adataidat kizárólag a bérlet igényléséhez használjuk, és bármikor kérheted a törlésüket.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container strip-inner">
+        <span>Korlátlan belépés</span>
+        <span>Csoportos órák</span>
+        <span>Szabadsúlyos zóna</span>
+        <span>Kardio park</span>
+        <span>Zuhanyzók</span>
+        <span>Központi helyszín</span>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Mit kapsz az ingyenes hónapban?</h2>
+      <div class="grid">
+        <article class="feature">
+          <div class="feature-num">01</div>
+          <h3>Teljes hozzáférés</h3>
+          <p>Minden gép, minden terület és minden csoportos óra elérhető számodra 30 napon keresztül.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-num">02</div>
+          <h3>Edzésterv indításhoz</h3>
+          <p>Az első látogatáskor átbeszéljük a céljaidat, és kapsz egy heti beosztást, amivel elindulhatsz.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-num">03</div>
+          <h3>Nincs rejtett díj</h3>
+          <p>Nincs regisztrációs díj és nincs automatikus előfizetés. A hónap végén te döntesz, maradsz-e.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-num">04</div>
+          <h3>Rugalmas időpontok</h3>
+          <p>Nyitvatartásunk hajnaltól késő estig tart, hogy az edzés beférjen a napodba.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Hogyan működik?</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <h3>Regisztrálj az űrlapon</h3>
+          <p>Add meg a neved, e-mail címed és opcionálisan a telefonszámod.</p>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <h3>Kapod a visszaigazolást</h3>
+          <p>E-mailben küldjük a részleteket és a bérlet aktiválásának módját.</p>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <h3>Jöjj el és eddz</h3>
+          <p>Az aktiválás után 30 napig korlátlanul használhatod a termet.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Gyakori kérdések</h2>
+      <div class="faq">
+        <details>
+          <summary>Valóban ingyenes?</summary>
+          <p>Igen. Az első 100 regisztráló egy teljes hónapot ingyen edzhet. Nincs regisztrációs díj, és nem kérünk bankkártyaadatokat.</p>
+        </details>
+        <details>
+          <summary>Mikor indul az ajánlat?</summary>
+          <p>A jelentkezőket e-mailben értesítjük a pontos kezdésről és az aktiválás lépéseiről.</p>
+        </details>
+        <details>
+          <summary>Mi történik a hónap végén?</summary>
+          <p>Semmi automatikus. Ha szeretnél maradni, választhatsz bérletet; ha nem, az együttműködés díjmentesen lezárul.</p>
+        </details>
+        <details>
+          <summary>Budapesten kívül lakom, jelentkezhetek?</summary>
+          <p>Igen, de a bérlet a budapesti termünkben vehető igénybe.</p>
+        </details>
+        <details>
+          <summary>Hogyan tároljátok az adataimat?</summary>
+          <p>A regisztrációs adatokat egy védett Google Sheets táblázatban tároljuk, és kizárólag az ajánlat lebonyolítására használjuk.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#top">PEST<span>POWER</span></a>
+        <p class="footer-sub">Pest Power Gym · Budapest</p>
+      </div>
+      <div class="footer-links">
+        <a href="#signup">Regisztráció</a>
+        <a href="#adatkezeles">Adatkezelés</a>
+        <a href="mailto:privatevsemvaram@gmail.com">privatevsemvaram@gmail.com</a>
+      </div>
+    </div>
+    <div class="container">
+      <details class="privacy" id="adatkezeles">
+        <summary>Adatkezelési tájékoztató</summary>
+        <p>Az űrlapon megadott nevet, e-mail címet és telefonszámot a Pest Power Gym az ingyenes hónapos bérlet igénylésének kezelésére használja. Az adatokat a Google Sheets szolgáltatásában tároljuk, és harmadik félnek nem adjuk át marketing célból. A hírlevélre kizárólag a külön bejelölt hozzájárulás esetén kerül sor. Kérheted az adataid törlését vagy módosítását a privatevsemvaram@gmail.com címen. Az adatokat a kampány lezárását követően legkésőbb 12 hónapig őrizzük meg.</p>
+      </details>
+      <p class="copyright">© <span id="year"></span> Pest Power Gym. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
