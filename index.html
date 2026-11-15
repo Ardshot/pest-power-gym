@@ -49,7 +49,7 @@
       <div class="card" id="signup">
         <div class="card-badge"><span data-remaining>100</span> hely maradt</div>
         <h2>Foglald le a helyed</h2>
-        <p class="card-sub">Add meg az adataidat, és e-mailben jelentkezünk a részletekkel.</p>
+        <p class="card-sub">Add meg az adataidat, válassz jelszót a gym fiókodhoz, és e-mailben jelentkezünk a részletekkel.</p>
 
         <form id="signup-form" novalidate>
           <label class="field">
@@ -66,6 +66,18 @@
             <span>Telefonszám <small>(opcionális)</small></span>
             <input type="tel" name="phone" autocomplete="tel" placeholder="+36 30 123 4567" maxlength="30">
           </label>
+
+          <label class="field">
+            <span>Jelszó a gym fiókodhoz</span>
+            <input type="password" name="password" autocomplete="new-password" placeholder="Legalább 8 karakter" minlength="8" maxlength="72" required>
+          </label>
+
+          <label class="field">
+            <span>Jelszó megerősítése</span>
+            <input type="password" name="password2" autocomplete="new-password" placeholder="Írd be újra" minlength="8" maxlength="72" required>
+          </label>
+
+          <p class="field-hint">Ez egy új jelszó a gym fiókodhoz — kérjük, ne az e-mail jelszavadat használd. A jelszót titkosítva tároljuk, és soha nem küldjük e-mailben.</p>
 
           <label class="check">
             <input type="checkbox" name="consent" required>
@@ -184,7 +196,7 @@
     <div class="container">
       <details class="privacy" id="adatkezeles">
         <summary>Adatkezelési tájékoztató</summary>
-        <p>Az űrlapon megadott nevet, e-mail címet és telefonszámot a Pest Power Gym az ingyenes hónapos bérlet igénylésének kezelésére használja. Az adatokat biztonságos online táblázatban tároljuk, és harmadik félnek nem adjuk át marketing célból. A hírlevélre kizárólag a külön bejelölt hozzájárulás esetén kerül sor. Kérheted az adataid törlését vagy módosítását a privatevsemvaram@gmail.com címen. Az adatokat a kampány lezárását követően legkésőbb 12 hónapig őrizzük meg.</p>
+        <p>Az űrlapon megadott nevet, e-mail címet és telefonszámot a Pest Power Gym az ingyenes hónapos bérlet igénylésének kezelésére használja. Az általad választott jelszót kizárólag titkosított formában (sóval ellátott hash) tároljuk a gym fiókodhoz, és soha nem küldjük e-mailben. Az adatokat biztonságos online táblázatban tároljuk, és harmadik félnek nem adjuk át marketing célból. A hírlevélre kizárólag a külön bejelölt hozzájárulás esetén kerül sor. Kérheted az adataid törlését vagy módosítását a privatevsemvaram@gmail.com címen. Az adatokat a kampány lezárását követően legkésőbb 12 hónapig őrizzük meg.</p>
       </details>
       <p class="copyright">© <span id="year"></span> Pest Power Gym. Minden jog fenntartva.</p>
     </div>

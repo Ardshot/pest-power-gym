@@ -389,6 +389,13 @@ a:hover {
   line-height: 1.5;
 }
 
+.field-hint {
+  margin: -4px 0 14px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #78808c;
+}
+
 .strip {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);

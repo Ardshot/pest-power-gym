@@ -65,10 +65,14 @@ function checked(name) {
   return Boolean(el && el.checked);
 }
 
-function validate(name, email, consent) {
+function validate(name, email, password, password2, consent) {
   if (name.length < 2) return "Kérjük, add meg a teljes neved.";
   if (name.length > 80) return "A név legfeljebb 80 karakter lehet.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return "Kérjük, adj meg egy érvényes e-mail címet.";
+  if (password.length < 8) return "A jelszónak legalább 8 karakter hosszúnak kell lennie.";
+  if (password.length > 72) return "A jelszó legfeljebb 72 karakter lehet.";
+  if (password !== password2) return "A két jelszó nem egyezik.";
+  if (password.toLowerCase() === email || password.toLowerCase() === email.split("@")[0]) return "A jelszó nem lehet az e-mail címed.";
   if (!consent) return "Az adatkezelési tájékoztató elfogadása kötelező.";
   return "";
 }
@@ -85,6 +89,8 @@ async function handleSubmit(event) {
   const name = value("name");
   const email = value("email").toLowerCase();
   const phone = value("phone");
+  const password = form.elements.password.value;
+  const password2 = form.elements.password2.value;
   const newsletter = checked("newsletter");
   const consent = checked("consent");
   const honey = value("company");
@@ -95,7 +101,7 @@ async function handleSubmit(event) {
     return;
   }
 
-  const problem = validate(name, email, consent);
+  const problem = validate(name, email, password, password2, consent);
   if (problem) {
     setMessage(problem, "is-error");
     return;
@@ -109,7 +115,7 @@ async function handleSubmit(event) {
     const res = await fetch(CONFIG.endpoint, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({ name, email, phone, newsletter })
+      body: JSON.stringify({ name, email, phone, password, newsletter })
     });
     const data = await res.json();
 
@@ -126,6 +132,8 @@ async function handleSubmit(event) {
       setMessage("Kérjük, adj meg egy érvényes e-mail címet.", "is-error");
     } else if (data && data.error === "name") {
       setMessage("Kérjük, add meg a teljes neved.", "is-error");
+    } else if (data && data.error === "password") {
+      setMessage("A jelszónak 8 és 72 karakter között kell lennie.", "is-error");
     } else {
       setMessage("Nem sikerült rögzíteni a jelentkezést. Kérjük, próbáld újra, vagy írj a " + CONFIG.contactEmail + " címre.", "is-error");
     }
